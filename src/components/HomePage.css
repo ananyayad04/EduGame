@@ -1,0 +1,217 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem 6rem;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #0f172a, #1e3a8a);
+}
+
+/* Header */
+.home-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.logo-text {
+  /* Dynamic font size for responsiveness */
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.logo-edu {
+  color: white;
+}
+
+.logo-game {
+  color: #facc15; /* Bright Yellow */
+}
+
+.subtitle-text {
+  font-size: clamp(1rem, 4vw, 1.25rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+/* Register Button */
+.register-btn {
+  background-color: #9333ea;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  margin-top: 1rem;
+  margin-left:10rem;
+}
+
+.register-btn:hover {
+  background-color: #8b5cf6;
+  transform: scale(1.05);
+}
+
+/* Language Section */
+.language-section {
+  width: 100%;
+  max-width: 24rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.section-title {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: clamp(1rem, 3.5vw, 1.125rem);
+  color: white;
+  font-weight: 500;
+  background-color: rgba(26, 30, 71, 0.8);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn:focus {
+  border-color: #60a5fa;
+  outline: none;
+}
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem;
+  width: 100%;
+  background-color: rgba(26, 30, 71, 0.9);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  animation: fadeInDown 0.3s ease-out forwards;
+}
+
+.dropdown-item {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(30, 41, 59, 0.8);
+}
+
+/* Corrected Start Adventure Button styles */
+.start-adventure-btn {
+  display: block;
+  width: 100%; /* Take full width of its container */
+  max-width: 15rem; /* But don't exceed a reasonable max width */
+  margin: 2rem auto 0; /* Center horizontally */
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap; /* Prevents text from wrapping */
+  color: white;
+  background-color: #2563eb;
+  border-radius: 2rem; /* Consistent border-radius */
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-adventure-btn:hover {
+  background-color: #1d4ed8;
+  border-color: #60a5fa;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.header-logo {
+  width: 420px;
+  margin-bottom: -20px;
+}
+
+.feature-image {
+  width: 300px;              /* size apne hisaab se adjust karo */
+  margin-top: -10px;
+  animation: float 3s ease-in-out infinite; /* motion effect */
+  filter: drop-shadow(0 0 12px #60a5fa);   /* glowing blue shadow */
+  transition: transform 0.3s ease;
+}
+
+.feature-image:hover {
+  transform: scale(1.1);      /* thoda zoom on hover */
+  filter: drop-shadow(0 0 20px #3b82f6); /* aur glow on hover */
+}
+
+/* Motion animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
