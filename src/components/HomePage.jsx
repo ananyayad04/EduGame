@@ -15,22 +15,16 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-
-      {/* Header with Custom Image + Subtitle */}
+      {/* Header */}
       <div className="home-header">
-        {/* Logo image */}
         <img 
-          src="/logo.png"   // public folder me rakho
+          src="/logo.png"
           alt="App Logo"
           className="header-logo"
         />
-
-        {/* Subtitle */}
         <p className="subtitle-text">{translations.subtitle}</p>
-
-        {/* New image with glow + motion effect */}
         <img 
-          src="/minilogo.png"   // is image ko public/feature.png me rakho
+          src="/minilogo.png"
           alt="Feature"
           className="feature-image"
         />
@@ -53,24 +47,9 @@ const HomePage = () => {
           </button>
           {isDropdownOpen && (
             <div className="dropdown-menu">
-              <button
-                onClick={() => handleLanguageChange('hi')}
-                className="dropdown-item"
-              >
-                Hindi
-              </button>
-              <button
-                onClick={() => handleLanguageChange('en')}
-                className="dropdown-item"
-              >
-                English
-              </button>
-              <button
-                onClick={() => handleLanguageChange('or')}
-                className="dropdown-item"
-              >
-                Odia
-              </button>
+              <button onClick={() => handleLanguageChange('hi')} className="dropdown-item">Hindi</button>
+              <button onClick={() => handleLanguageChange('en')} className="dropdown-item">English</button>
+              <button onClick={() => handleLanguageChange('or')} className="dropdown-item">Odia</button>
             </div>
           )}
         </div>

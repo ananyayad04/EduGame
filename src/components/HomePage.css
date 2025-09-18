@@ -18,49 +18,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-}
-
-.logo-text {
-  /* Dynamic font size for responsiveness */
-  font-size: clamp(2rem, 8vw, 4rem);
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  margin-bottom: 0.5rem;
-}
-
-.logo-edu {
-  color: white;
-}
-
-.logo-game {
-  color: #facc15; /* Bright Yellow */
 }
 
 .subtitle-text {
   font-size: clamp(1rem, 4vw, 1.25rem);
   font-weight: 300;
   margin-bottom: 1rem;
-}
-
-/* Register Button */
-.register-btn {
-  background-color: #9333ea;
-  color: white;
-  font-weight: bold;
-  padding: 0.5rem 1.2rem;
-  border-radius: 9999px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  border: none;
-  cursor: pointer;
-  font-size: clamp(0.8rem, 3vw, 1rem);
-  margin-top: 1rem;
-  margin-left:10rem;
-}
-
-.register-btn:hover {
-  background-color: #8b5cf6;
-  transform: scale(1.05);
 }
 
 /* Language Section */
@@ -142,20 +105,20 @@
   background-color: rgba(30, 41, 59, 0.8);
 }
 
-/* Corrected Start Adventure Button styles */
+/* Start Adventure Button */
 .start-adventure-btn {
   display: block;
-  width: 100%; /* Take full width of its container */
-  max-width: 15rem; /* But don't exceed a reasonable max width */
-  margin: 2rem auto 0; /* Center horizontally */
+  width: 100%;
+  max-width: 15rem;
+  margin: 2rem auto 0;
   padding: 1rem 1.5rem;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   font-weight: bold;
   text-align: center;
-  white-space: nowrap; /* Prevents text from wrapping */
+  white-space: nowrap;
   color: white;
   background-color: #2563eb;
-  border-radius: 2rem; /* Consistent border-radius */
+  border-radius: 2rem;
   border: 2px solid transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -169,49 +132,85 @@
 
 /* Animations */
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
 .header-logo {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   margin-bottom: -20px;
+  height: auto;
 }
 
 .feature-image {
-  width: 300px;              /* size apne hisaab se adjust karo */
+  width: 100%;
+  max-width: 300px;
   margin-top: -10px;
-  animation: float 3s ease-in-out infinite; /* motion effect */
-  filter: drop-shadow(0 0 12px #60a5fa);   /* glowing blue shadow */
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px #60a5fa);
   transition: transform 0.3s ease;
 }
 
 .feature-image:hover {
-  transform: scale(1.1);      /* thoda zoom on hover */
-  filter: drop-shadow(0 0 20px #3b82f6); /* aur glow on hover */
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px #3b82f6);
 }
 
-/* Motion animation */
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+/* --- Responsive Breakpoints --- */
+
+/* Tablet landscape and below */
+@media (max-width: 1024px) {
+  .home-container {
+    padding: 1.8rem 1rem 5rem;
+  }
+  .header-logo {
+    max-width: 350px;
+  }
+  .feature-image {
+    max-width: 250px;
+  }
 }
 
+/* Tablets / small laptops */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1.5rem 1rem 4.5rem;
+  }
+  .header-logo {
+    max-width: 260px;
+  }
+  .feature-image {
+    max-width: 200px;
+  }
+  .subtitle-text {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 1rem 0.8rem 4rem;
+  }
+  .header-logo {
+    max-width: 200px;
+  }
+  .feature-image {
+    max-width: 150px;
+  }
+  .start-adventure-btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.2rem;
+    max-width: 12rem;
+  }
+  .dropdown-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
